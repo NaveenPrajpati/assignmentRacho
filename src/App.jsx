@@ -10,9 +10,9 @@ function App() {
 
 
   return (
-    <div className='bg-red-400'>
+    <div className=' bg-blue-950'>
 <Header/>
-<div className='flex'>
+<div className='flex flex-col sm:flex-row'>
   <Instruction/>
   <GameBoard/>
 </div>
