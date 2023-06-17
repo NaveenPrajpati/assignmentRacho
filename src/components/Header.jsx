@@ -1,11 +1,11 @@
 import React from 'react'
 
-function Header() {
+function Header({dotLength}) {
 let arr=[];
   for(let i=1;i<=13;i++){
     arr.push(
       <div className='mt-2'>
-    <div className='h-4 w-4 rounded-full bg-white'></div>
+    <div className={`h-4 w-4 rounded-full ${i<=dotLength?'bg-green-400':'bg-white'} `}></div>
     <small className='text-gray-400'>{i}</small>
     </div>
     )
@@ -15,9 +15,9 @@ let arr=[];
   }
 
   return (
-    <div className='bg-blue-950 p-1 text-white flex justify-around'>
-    <img src="" alt="Logo" />
-    <div className='flex '>
+    <div className='bg-indigo-950 p-1 text-white flex justify-around items-center gap-2'>
+    <h1 className='font-bold text-2xl'>Logo</h1>
+    <div className='flex flex-wrap'>
 
     {arr}
     </div>
